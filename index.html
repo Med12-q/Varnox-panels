@@ -1,42 +1,324 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VARNOXorNOVARK Panels</title>
+<title>𝐕𝐀𝐑𝐍𝐎𝐗-𝐏𝐀𝐍𝐄𝐋𝐒_𝐀𝐂𝐇𝐀𝐓</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:white;margin:0;text-align:center}
-header{position:relative;}
-.banner{width:100%;height:300px;background:url('a_promotional_digital_digital_graphic_advertisemen.png') no-repeat center/cover;display:flex;align-items:center;justify-content:center;}
-.banner h1{background:rgba(0,0,0,0.6);padding:15px 25px;border-radius:12px;font-size:36px;color:#22c55e;}
-.subtitle{color:#94a3b8;margin-top:10px}
-.container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:40px}
-.card{background:#111827;border-radius:12px;padding:25px;width:250px;box-shadow:0 0 15px rgba(0,0,0,0.5)}
-.price{font-size:28px;margin:10px 0;color:#22c55e}
-.btn{display:inline-block;margin-top:15px;padding:10px 20px;background:#22c55e;color:black;text-decoration:none;border-radius:8px;font-weight:bold}
-footer{margin-top:40px;padding:20px;color:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  color:white;
+  background:#0b1220;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  width:200%;
+  height:200%;
+  background:linear-gradient(45deg,#00f5a0,#00d9f5,#6a5cff,#ff00cc);
+  background-size:400% 400%;
+  animation:move 15s infinite;
+  z-index:-1;
+  opacity:0.25;
+}
+
+@keyframes move{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 25px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  z-index:10;
+}
+
+.logo{
+  font-weight:bold;
+  color:#00f5a0;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px 50px;
+}
+
+.hero h1{
+  font-size:34px;
+}
+
+.hero span{
+  color:#00f5a0;
+  font-family:'Arial Black', sans-serif;
+}
+
+.hero p{
+  opacity:0.8;
+  margin:10px 0 20px;
+  font-size:18px;
+}
+
+.btn{
+  padding:12px 25px;
+  border-radius:10px;
+  border:none;
+  background:linear-gradient(45deg,#00f5a0,#00d9f5);
+  color:black;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #00f5a0;
+}
+
+/* CARDS */
+.container{
+  padding:30px;
+  display:grid;
+  gap:20px;
+}
+
+.card{
+  background:rgba(17,26,46,0.8);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h2{
+  font-family:'Arial Black', sans-serif;
+}
+
+.price{
+  color:#00f5a0;
+  margin:10px 0;
+  font-family:'Arial Black', sans-serif;
+}
+
+/* FEATURES */
+.features{
+  text-align:center;
+  padding:40px 20px;
+}
+
+.feature-box{
+  display:grid;
+  gap:15px;
+}
+
+.feature{
+  background:#111a2e;
+  padding:15px;
+  border-radius:10px;
+  font-weight:600;
+}
+
+/* DEVELOPPEURS EN BAS */
+.developers-section{
+  margin-top:auto;
+  background:#111;
+  padding:20px;
+  border-top:2px solid red;
+}
+
+.developers-section h3{
+  text-align:center;
+  margin-bottom:15px;
+  color:red;
+  font-weight:700;
+}
+
+.developers-list{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.dev{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:#1a1a1a;
+  padding:15px;
+  border-radius:10px;
+  width:160px;
+}
+
+.dev img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  border:2px solid red;
+  margin-bottom:10px;
+}
+
+.dev-name{
+  font-weight:600;
+  margin-bottom:5px;
+  text-align:center;
+  font-family:'Arial Black', sans-serif;
+}
+
+.dev-role{
+  font-size:13px;
+  opacity:0.7;
+  text-align:center;
+  margin-bottom:8px;
+}
+
+.dev button{
+  padding:8px 14px;
+  border-radius:6px;
+  border:none;
+  background:red;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+  width:100%;
+}
+
+.dev button:hover{
+  background:#ff3333;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:15px;
+  color:red;
+  font-weight:700;
+}
 </style>
 </head>
-<body><header>
-<div class="banner">
-<h1>VARNOXorNOVARK PANELS</h1>
+<body>
+
+<header>
+  <div class="logo">✦ 𝐕𝐀𝐑𝐍𝐎𝐗-𝐏𝐀𝐍𝐄𝐋𝐒_𝐀𝐂𝐇𝐀𝐓✦</div>
+  <div>
+    <button class="btn" onclick="openPolicy()">Confidentialité</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐮𝐞 𝐬𝐮𝐫 <span>𝐕𝐀𝐑𝐍𝐎𝐗-𝐏𝐀𝐍𝐄𝐋𝐒_𝐀𝐂𝐇𝐀𝐓</span></h1>
+  <p>✨ 𝐏𝐚𝐧𝐞𝐥𝐬 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐏𝐨𝐮𝐫 𝐛𝐨𝐭𝐬  & 𝐏𝐫𝐨𝐣𝐞𝐭𝐬 – 𝐑𝐚𝐩𝐢𝐝𝐞, 𝐒𝐞́𝐜𝐮𝐫𝐢𝐬𝐞́ 𝐞𝐭 𝐏𝐮𝐢𝐬𝐬𝐚𝐧𝐭 ✨</p>
+  <button class="btn" onclick="contact()">📱 Contacter VARNOX</button>
+</section>
+
+<section class="container">
+  <div class="card">
+    <h2>Panel Limité</h2>
+    <div class="price">40 000 GNF</div>
+    <button class="btn" onclick="buy('Limité')">💰 Acheter</button>
+  </div>
+
+  <div class="card">
+    <h2>Panel Standard</h2>
+    <div class="price">70 000 GNF</div>
+    <button class="btn" onclick="buy('Standard')">💰 Acheter</button>
+  </div>
+
+  <div class="card">
+    <h2>Panel Illimité</h2>
+    <div class="price">100 000 GNF</div>
+    <button class="btn" onclick="buy('Illimité')">💰 Acheter</button>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Pourquoi nous choisir ?</h2>
+  <div class="feature-box">
+    <div class="feature">⚡ Ultra rapide</div>
+    <div class="feature">🔒 Sécurisé</div>
+    <div class="feature">🤖 Automatisé</div>
+    <div class="feature">🌐 Disponible 24/7</div>
+  </div>
+</section>
+
+<!-- DEVELOPPEURS -->
+<section class="developers-section">
+  <h3>Notre Équipe</h3>
+  <div class="developers-list">
+    <div class="dev">
+      <img src="https://bandaheali-cdn.koyeb.app/media/bot_1773487773014.jpg" alt="VARNOX">
+      <div class="dev-name">✦𝐕𝐀𝐑𝐍𝐎𝐗𝐎𝐫𝐍𝐎𝐕𝐀𝐑𝐊✦</div>
+      <div class="dev-role">Lead / Principal</div>
+      <button onclick="dev1()">📱 WhatsApp</button>
+    </div>
+
+    <div class="dev">
+      <img src="https://bandaheali-cdn.koyeb.app/media/bot_1773487773014.jpg" alt="Ahmad">
+      <div class="dev-name">✪أَحْمَد مُحَمَّد س✦💦🧠</div>
+      <div class="dev-role">Backend</div>
+      <button onclick="dev2()">📱 WhatsApp</button>
+    </div>
+
+    <div class="dev">
+      <img src="https://bandaheali-cdn.koyeb.app/media/bot_1773487773014.jpg" alt="OEIL">
+      <div class="dev-name">✪𝐎𝐄𝐈𝐋𓂀</div>
+      <div class="dev-role">Sécurité</div>
+      <button onclick="dev3()">📱 WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Merci de faire confiance à VARNOX. 🌐 Solutions fiables pour développeurs et innovateurs.
+</footer>
+
+<div class="modal" id="policyModal">
+  <div class="modal-content">
+    <h3>Politique de confidentialité</h3>
+    <p style="font-size:13px;opacity:0.8;margin:10px 0;">
+      🔒 Nous respectons votre vie privée. Toutes les données restent sécurisées et ne sont jamais partagées.
+    </p>
+    <button class="btn" onclick="closePolicy()">Fermer</button>
+  </div>
 </div>
-<p class="subtitle">Panels Premium pour Bots & Projets</p>
-</header><div class="container"><div class="card">
-<h2>Panel Limité</h2>
-<p class="price">40 000 GNF</p>
-<p>Ressources limitées<br>Idéal pour débutants</p>
-<a class="btn" href="https://wa.me/224669288332?text=Bonjour%20je%20veux%20acheter%20le%20panel%20limite">Acheter</a>
-</div><div class="card">
-<h2>Panel Standard</h2>
-<p class="price">70 000 GNF</p>
-<p>Meilleure performance<br>Pour bots et projets</p>
-<a class="btn" href="https://wa.me/224669288332?text=Bonjour%20je%20veux%20acheter%20le%20panel%20standard">Acheter</a>
-</div><div class="card">
-<h2>Panel Illimité</h2>
-<p class="price">100 000 GNF</p>
-<p>Ressources illimitées<br>Performance maximale</p>
-<a class="btn" href="https://wa.me/224669288332?text=Bonjour%20je%20veux%20acheter%20le%20panel%20illimite">Acheter</a>
-</div></div><footer>
-<p>© VARNOXorNOVARK | DEV•TECH</p>
-</footer></body>
-</html>
+
+<script>
+// Lead principal VARNOX
+const leadWA = "https://wa.me/224669388332?text=👋 Bonjour, je veux contacter le développeur principal de VARNOX PANELS 💻";
+
+function contact(){ window.open(leadWA,"_blank"); }
+function buy(panel){
+  window.open("https://wa.me/224669388332?text=💰 Hello! I want to buy the *"+panel+"* panel. / Bonjour! Je veux acheter le panel *"+panel+"* ✨","_blank");
+}
+
+// Développeurs
+function dev1(){ window.open("https://wa.me/224669388332"); }
+function dev2(){ window.open("https://wa.me/224610835573"); }
+function dev3(){ window.open("https://wa.me/15878472206"); }
+
+// Modal politique
+function openPolicy(){document.getElementById("policyModal").style.display="flex";}
+function closePolicy(){document.getElementById("policyModal").style.display="none";}
+</script>
+
+</body>
+  </html>
