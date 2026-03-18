@@ -4,15 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>𝐕𝐀𝐑𝐍𝐎𝐗-𝐏𝐀𝐍𝐄𝐋𝐒_𝐀𝐂𝐇𝐀𝐓</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
 body{
   color:white;
-  background:#0b1220;
+  background:#0a0a0f; /* fond très Dark */
   display:flex;
   flex-direction:column;
   min-height:100vh;
@@ -27,7 +25,7 @@ body::before{
   background-size:400% 400%;
   animation:move 15s infinite;
   z-index:-1;
-  opacity:0.25;
+  opacity:0.15; /* gradient discret pour rester Dark */
 }
 
 @keyframes move{
@@ -36,41 +34,28 @@ body::before{
   100%{background-position:0% 50%;}
 }
 
+/* Header */
 header{
   display:flex;
   justify-content:space-between;
   padding:15px 25px;
-  background:rgba(255,255,255,0.05);
+  background:rgba(0,0,0,0.6); /* sombre */
   backdrop-filter:blur(10px);
   z-index:10;
 }
-
 .logo{
   font-weight:bold;
   color:#00f5a0;
 }
 
-/* HERO */
+/* Hero */
 .hero{
   text-align:center;
   padding:80px 20px 50px;
 }
-
-.hero h1{
-  font-size:34px;
-}
-
-.hero span{
-  color:#00f5a0;
-  font-family:'Arial Black', sans-serif;
-}
-
-.hero p{
-  opacity:0.8;
-  margin:10px 0 20px;
-  font-size:18px;
-}
-
+.hero h1{font-size:34px;}
+.hero span{color:#00f5a0;font-family:'Arial Black', sans-serif;}
+.hero p{opacity:0.8;margin:10px 0 20px;font-size:18px;}
 .btn{
   padding:12px 25px;
   border-radius:10px;
@@ -81,21 +66,19 @@ header{
   cursor:pointer;
   transition:0.3s;
 }
-
 .btn:hover{
   transform:scale(1.05);
   box-shadow:0 0 20px #00f5a0;
 }
 
-/* CARDS */
+/* Cards */
 .container{
   padding:30px;
   display:grid;
   gap:20px;
 }
-
 .card{
-  background:rgba(17,26,46,0.8);
+  background:rgba(10,10,20,0.9);
   backdrop-filter:blur(10px);
   padding:25px;
   border-radius:15px;
@@ -103,130 +86,41 @@ header{
   border:1px solid rgba(255,255,255,0.05);
   transition:0.3s;
 }
+.card:hover{transform:translateY(-5px);}
+.card h2{font-family:'Arial Black', sans-serif;}
+.price{color:#00f5a0;margin:10px 0;font-family:'Arial Black', sans-serif;}
 
-.card:hover{
-  transform:translateY(-5px);
-}
+/* Features */
+.features{ text-align:center; padding:40px 20px; }
+.feature-box{ display:grid; gap:15px; }
+.feature{ background:#111a2e; padding:15px; border-radius:10px; font-weight:600; }
 
-.card h2{
-  font-family:'Arial Black', sans-serif;
-}
+/* Developers */
+.developers-section{ margin-top:auto; background:#111; padding:20px; border-top:2px solid red; }
+.developers-section h3{ text-align:center; margin-bottom:15px; color:red; font-weight:700; }
+.developers-list{ display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px; }
+.dev{ display:flex; flex-direction:column; align-items:center; background:#1a1a1a; padding:15px; border-radius:10px; width:160px; }
+.dev img{ width:80px; height:80px; border-radius:50%; border:2px solid red; margin-bottom:10px; }
+.dev-name{ font-weight:600; margin-bottom:5px; text-align:center; font-family:'Arial Black', sans-serif; }
+.dev-role{ font-size:13px; opacity:0.7; text-align:center; margin-bottom:8px; }
+.dev button{ padding:8px 14px; border-radius:6px; border:none; background:red; color:white; cursor:pointer; font-weight:600; transition:0.3s; width:100%; }
+.dev button:hover{ background:#ff3333; }
 
-.price{
-  color:#00f5a0;
-  margin:10px 0;
-  font-family:'Arial Black', sans-serif;
-}
+/* Footer */
+footer{ text-align:center; padding:15px; color:red; font-weight:700; }
 
-/* FEATURES */
-.features{
-  text-align:center;
-  padding:40px 20px;
-}
-
-.feature-box{
-  display:grid;
-  gap:15px;
-}
-
-.feature{
-  background:#111a2e;
-  padding:15px;
-  border-radius:10px;
-  font-weight:600;
-}
-
-/* DEVELOPPEURS EN BAS */
-.developers-section{
-  margin-top:auto;
-  background:#111;
-  padding:20px;
-  border-top:2px solid red;
-}
-
-.developers-section h3{
-  text-align:center;
-  margin-bottom:15px;
-  color:red;
-  font-weight:700;
-}
-
-.developers-list{
-  display:flex;
-  justify-content:space-around;
-  flex-wrap:wrap;
-  gap:20px;
-}
-
-.dev{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  background:#1a1a1a;
-  padding:15px;
-  border-radius:10px;
-  width:160px;
-}
-
-.dev img{
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  border:2px solid red;
-  margin-bottom:10px;
-}
-
-.dev-name{
-  font-weight:600;
-  margin-bottom:5px;
-  text-align:center;
-  font-family:'Arial Black', sans-serif;
-}
-
-.dev-role{
-  font-size:13px;
-  opacity:0.7;
-  text-align:center;
-  margin-bottom:8px;
-}
-
-.dev button{
-  padding:8px 14px;
-  border-radius:6px;
-  border:none;
-  background:red;
-  color:white;
-  cursor:pointer;
-  font-weight:600;
-  transition:0.3s;
-  width:100%;
-}
-
-.dev button:hover{
-  background:#ff3333;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:15px;
-  color:red;
-  font-weight:700;
-}
 </style>
 </head>
 <body>
 
 <header>
   <div class="logo">✦ 𝐕𝐀𝐑𝐍𝐎𝐗-𝐏𝐀𝐍𝐄𝐋𝐒_𝐀𝐂𝐇𝐀𝐓✦</div>
-  <div>
-    <button class="btn" onclick="openPolicy()">Confidentialité</button>
-  </div>
+  <div><button class="btn" onclick="openPolicy()">Confidentialité</button></div>
 </header>
 
 <section class="hero">
   <h1>𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐮𝐞 𝐬𝐮𝐫 <span>𝐕𝐀𝐑𝐍𝐎𝐗-𝐏𝐀𝐍𝐄𝐋𝐒_𝐀𝐂𝐇𝐀𝐓</span></h1>
-  <p>✨ 𝐏𝐚𝐧𝐞𝐥𝐬 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐏𝐨𝐮𝐫 𝐛𝐨𝐭𝐬  & 𝐏𝐫𝐨𝐣𝐞𝐭𝐬 – 𝐑𝐚𝐩𝐢𝐝𝐞, 𝐒𝐞𝐜𝐮𝐫𝐢𝐬𝐞 𝐞𝐭 𝐏𝐮𝐢𝐬𝐬𝐚𝐧𝐭 ✨</p>
+  <p>✨ Panels Premium pour bots & projets – Rapide, Sécurisé et Puissant ✨</p>
   <button class="btn" onclick="contact()">📱 Contacter VARNOX</button>
 </section>
 
@@ -236,13 +130,11 @@ footer{
     <div class="price">40 000 GNF</div>
     <button class="btn" onclick="buy('Limité')">💰 Acheter</button>
   </div>
-
   <div class="card">
     <h2>Panel Standard</h2>
     <div class="price">70 000 GNF</div>
     <button class="btn" onclick="buy('Standard')">💰 Acheter</button>
   </div>
-
   <div class="card">
     <h2>Panel Illimité</h2>
     <div class="price">100 000 GNF</div>
@@ -269,14 +161,12 @@ footer{
       <div class="dev-role">Lead / Principal</div>
       <button onclick="dev1()">📱 WhatsApp</button>
     </div>
-
     <div class="dev">
       <img src="https://bandaheali-cdn.koyeb.app/media/bot_1773487773014.jpg" alt="Ahmad">
       <div class="dev-name">✪أَحْمَد مُحَمَّد س✦💦🧠</div>
       <div class="dev-role">Backend</div>
       <button onclick="dev2()">📱 WhatsApp</button>
     </div>
-
     <div class="dev">
       <img src="https://bandaheali-cdn.koyeb.app/media/bot_1773487773014.jpg" alt="OEIL">
       <div class="dev-name">✪𝐎𝐄𝐈𝐋𓂀</div>
@@ -290,42 +180,35 @@ footer{
   Merci de faire confiance à VARNOX. 🌐 Solutions fiables pour développeurs et innovateurs.
 </footer>
 
-<!-- AUDIO INVISIBLE + SCRIPT -->
+<!-- AUDIO INVISIBLE -->
 <audio id="bg-music" loop>
   <source src="assets/music/song.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+// musique invisible, autoplay fallback mobile
+document.addEventListener("DOMContentLoaded", function(){
   const music = document.getElementById("bg-music");
-  music.volume = 0.3; // volume 0.0 à 1.0
+  music.volume = 0.3;
 
-  music.play().catch(() => {
-    document.addEventListener("click", () => {
-      music.play();
-    }, { once: true });
-  });
+  const playMusic = () => {
+    music.play().catch(e=>console.log("autoplay bloqué"));
+  };
+
+  playMusic(); // essai autoplay
+  document.body.addEventListener("click", playMusic, {once:true}); // fallback
 });
-</script>
 
-<script>
-// Lead principal VARNOX
+// Lead et achat
 const leadWA = "https://wa.me/224669288332?text=👋 Bonjour, je veux contacter le développeur principal de VARNOX PANELS 💻";
-
 function contact(){ window.open(leadWA,"_blank"); }
-function buy(panel){
-  window.open("https://wa.me/224669288332?text=💰 Hello! I want to buy the *"+panel+"* panel. / Bonjour! Je veux acheter le panel *"+panel+"* ✨","_blank");
-}
-
-// Développeurs
+function buy(panel){ window.open("https://wa.me/224669288332?text=💰 Je veux acheter le panel *"+panel+"*","_blank"); }
 function dev1(){ window.open("https://wa.me/224669288332"); }
 function dev2(){ window.open("https://wa.me/224610835573"); }
 function dev3(){ window.open("https://wa.me/15878472206"); }
-
-// Modal politique
 function openPolicy(){document.getElementById("policyModal").style.display="flex";}
 function closePolicy(){document.getElementById("policyModal").style.display="none";}
 </script>
 
 </body>
-</html>
+         </html>
