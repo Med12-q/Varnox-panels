@@ -10,24 +10,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-  <audio id="bg-music" loop>
-  <source src="assets/music/song.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const music = document.getElementById("bg-music");
-
-  music.volume = 0.3; // volume (0.0 à 1.0)
-
-  music.play().catch(() => {
-    document.addEventListener("click", () => {
-      music.play();
-    }, { once: true });
-  });
-});
-</script>
-  
 body{
   color:white;
   background:#0b1220;
@@ -278,7 +260,6 @@ footer{
   </div>
 </section>
 
-<!-- DEVELOPPEURS -->
 <section class="developers-section">
   <h3>Notre Équipe</h3>
   <div class="developers-list">
@@ -309,15 +290,23 @@ footer{
   Merci de faire confiance à VARNOX. 🌐 Solutions fiables pour développeurs et innovateurs.
 </footer>
 
-<div class="modal" id="policyModal">
-  <div class="modal-content">
-    <h3>Politique de confidentialité</h3>
-    <p style="font-size:13px;opacity:0.8;margin:10px 0;">
-      🔒 Nous respectons votre vie privée. Toutes les données restent sécurisées et ne sont jamais partagées.
-    </p>
-    <button class="btn" onclick="closePolicy()">Fermer</button>
-  </div>
-</div>
+<!-- AUDIO INVISIBLE + SCRIPT -->
+<audio id="bg-music" loop>
+  <source src="assets/music/song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const music = document.getElementById("bg-music");
+  music.volume = 0.3; // volume 0.0 à 1.0
+
+  music.play().catch(() => {
+    document.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
+});
+</script>
 
 <script>
 // Lead principal VARNOX
